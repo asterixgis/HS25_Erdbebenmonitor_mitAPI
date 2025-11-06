@@ -7,10 +7,10 @@ import {
 } from "react-leaflet";
 import { Button } from "@mui/material";
 import plate_boundaries from "./assets/plate_boundaries.geojson.json";
-import data from "./assets/4.5_week.geojson.json";
+//import data from "./assets/4.5_week.geojson.json";
 
-export const Map = ({ size, setFocussedEarthquake }) => {
-  const earthquakes = data.features;
+export const Map = ({ size, setFocussedEarthquake, featurecache }) => {
+  const earthquakes = featurecache.features || [];
 
   return (
     <MapContainer
